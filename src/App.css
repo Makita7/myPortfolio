@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Kanit:wght@400;500&family=Quicksand:wght@400;600;700&display=swap');
+/*
+    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+*/
+:root{
+    --seaGreen: #26A0A0;
+    --yellow: #F09A00;
+    --olive: #858800;
+    --cobalt: #2657A0;
+    --black: #0C0D10;
+}
 
 .flex{
     display: flex;
 }
 .space-between {
     justify-content: space-between;
+}
+
+.yellow{
+    color: var(--yellow);
+}
+
+.olive{
+    color: var(--olive);
+}
+
+.cobalt{
+    color: var(--cobalt);
 }
