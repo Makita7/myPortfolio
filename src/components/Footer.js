@@ -46,13 +46,13 @@ function SiteFooter() {
                 <Connect>Connect</Connect>
             </Wrapper>
             <Social className="flex">
-                <a href="https://www.linkedin.com/in/sofia-makita-348a29172/">
+                <a className="cobalt" href="https://www.linkedin.com/in/sofia-makita-348a29172/">
                     <FaLinkedin size={28}/>
                 </a>
-                <a href="">
+                <a className="seaGreen" href="">
                     <IoMdMail size={28} />
                 </a>
-                <a href="">
+                <a className="olive" href="">
                     <IoLogoWhatsapp size={28}/>
                 </a>
             </Social>

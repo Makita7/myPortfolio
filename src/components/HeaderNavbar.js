@@ -10,12 +10,15 @@ const Navbar = styled.nav`
 `
 
 const Logo = styled.p`
-    font-family: 'Kanit', sans-serif;
-    font-weight: 500;
-    font-size: 1.7rem;
-    padding-left: 2rem;
-    color: #26A0A0;
-    margin-top: 1.4rem !important;
+    & a{
+        font-family: 'Kanit', sans-serif;
+        font-weight: 500;
+        font-size: 1.7rem;
+        padding-left: 2rem;
+        color: #26A0A0;
+        margin-top: 1.4rem !important;
+        text-decoration: none;
+    }
 `
 
 const Links = styled.div`
@@ -33,7 +36,9 @@ const Links = styled.div`
 function SiteHeaderNavbar() {
     return (
         <Navbar className='flex space-between'>
-            <Logo>Sofia Makita</Logo>
+            <Logo>
+                <Link to='/'>Sofia Makita</Link>
+                </Logo>
             <Links>
                 <Link className='yellow' to='/' >Home</Link>
                 <Link className='olive' to='/portfolio' >Portfolio</Link>

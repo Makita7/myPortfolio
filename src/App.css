@@ -30,3 +30,15 @@
 .cobalt{
     color: var(--cobalt);
 }
+
+.black{
+    color: var(--black);
+}
+
+.seaGreen{
+    color: var(--seaGreen);
+}
+
+.and{
+    position: relative !important;
+}
