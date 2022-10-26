@@ -32,7 +32,7 @@ export {Title};
 
 function Portfolio() {
     return (
-        <div>
+        <div className='minHeight'>
             <div>
                 <Link to='ux-ui' >
                     <LinkImgD alt='go to frontend' src={GoToDesign} />

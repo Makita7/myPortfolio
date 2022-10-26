@@ -6,6 +6,8 @@ function FrontEnd() {
         <>
             <Title className='watermelonRed'>Frontend</Title>
             <PortfolioCard/>
+            <PortfolioCard/>
+            <PortfolioCard/>
         </>
     );
 }

@@ -69,3 +69,7 @@
     text-align: center;
     justify-content: center;
 }
+
+.minHeight{
+    min-height: 42rem;
+}
