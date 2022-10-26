@@ -41,7 +41,7 @@ function SiteHeaderNavbar() {
                 </Logo>
             <Links>
                 <Link className='yellow' to='/' >Home</Link>
-                <Link className='olive' to='/portfolio' >Portfolio</Link>
+                <Link className='olive' to='/portfolio/frontend' >Portfolio</Link>
                 <Link className='cobalt' to='/about' >About</Link>
             </Links>
         </Navbar>

@@ -1,8 +1,8 @@
-import React from 'react'
+import {Title} from '../pages/Portfolio';
 
 function UxUiDesign() {
     return (
-        <div>UxUiDesign</div>
+        <Title className='olive'>UX/UI Projects</Title>
     );
 }
 

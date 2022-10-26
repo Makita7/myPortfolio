@@ -10,6 +10,7 @@
     --olive: #858800;
     --cobalt: #2657A0;
     --black: #0C0D10;
+    --WatermelonRed: #C74444;
 }
 
 .flex{
@@ -20,25 +21,51 @@
 }
 
 .yellow{
-    color: var(--yellow);
+    color: var(--yellow) !important;
 }
 
 .olive{
-    color: var(--olive);
+    color: var(--olive) !important;
 }
 
 .cobalt{
-    color: var(--cobalt);
+    color: var(--cobalt) !important;
 }
 
 .black{
-    color: var(--black);
+    color: var(--black) !important;
 }
 
 .seaGreen{
-    color: var(--seaGreen);
+    color: var(--seaGreen) !important;
+}
+
+.watermelonRed{
+    color: var(--WatermelonRed) !important;
 }
 
 .and{
     position: relative !important;
+}
+
+.profilepic{
+    width: 70%;
+}
+
+.techIcon{
+    margin: 0.5rem 0.5rem;
+}
+
+.langIcon{
+    margin: 0.5rem 0.5rem;
+}
+
+.cardImg{
+    width: 90%;
+    padding-left: 10%;
+}
+
+.centered{
+    text-align: center;
+    justify-content: center;
 }

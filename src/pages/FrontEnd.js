@@ -1,8 +1,12 @@
-import React from 'react'
+import PortfolioCard from '../components/PortfolioCard';
+import {Title} from '../pages/Portfolio';
 
 function FrontEnd() {
     return (
-        <div>FrontEnd</div>
+        <>
+            <Title className='watermelonRed'>Frontend</Title>
+            <PortfolioCard/>
+        </>
     );
 }
 

@@ -8,6 +8,10 @@ import About from './pages/About';
 import UxUiDesign from './pages/UxUiDesign';
 import FrontEnd from './pages/FrontEnd';
 
+/**
+ * I want to make flavicon with a star or a & symbol
+**/
+
 function App() {
   return (
     <div className="App">
