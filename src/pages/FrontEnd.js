@@ -30,6 +30,7 @@ function FrontEnd() {
             { FrontendList.map( i => (
                     <PortfolioCard
                         id={i.id}
+                        routerLink={i.routerLink}
                         title={i.title}
                         description={i.description}
                         type={i.type}

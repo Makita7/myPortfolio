@@ -24,7 +24,7 @@ export const FrontendList = [
     {
         routerLink: '/pieceOne',
         category: {
-            frontend: true,
+            design: false,
         },
         id: 1,
         title: 'TItle of Project',
