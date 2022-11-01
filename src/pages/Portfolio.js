@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-
 import GoToDesign from '../assets/design-btn.png';
 import GoToFront from '../assets/frontend-btn.png';
-
 
 const Title = styled.h1`
     font-size: 3rem;
@@ -31,26 +30,41 @@ export {Title};
 
 
 function Portfolio() {
+    const Location = useLocation();
+    const [FrontendStatus, setFrontendStatus] = useState(true);
+
+
+    useEffect(() => {
+        setFrontendStatus(!FrontendStatus);
+    }, [Location]);
+
+
     return (
         <div className='minHeight'>
             <div>
-                <Link to='ux-ui' >
-                    <LinkImgD alt='go to frontend' src={GoToDesign} />
-                </Link>
-                <Link to='frontend' >
-                    <LinkImgF alt='go to frontend' src={GoToFront} />
-                </Link>
+            {!FrontendStatus ?
+                <>
+                    <Link  className='undoOpacity' to='ux-ui' >
+                        <LinkImgD alt='go to design' src={GoToDesign} />
+                    </Link>
+                    <Link className='opacity' to='frontend' >
+                        <LinkImgF alt='go to frontend' src={GoToFront} />
+                    </Link>
+                </>
+                :
+                <>
+                    <Link className='opacity' to='ux-ui' >
+                        <LinkImgD alt='go to design' src={GoToDesign} />
+                    </Link>
+                    <Link className='undoOpacity' to='frontend' >
+                        <LinkImgF alt='go to frontend' src={GoToFront} />
+                    </Link>
+                </>
+            }
             </div>
             <Outlet/>
         </div>
     );
 }
-
-/**
- *  page> cards and call to list>card with only design && list of portfolio pieces
-
-    the card should have a conditional  rendering so if photoshop is true it shows the icon and if not it doesn't
- */
-
 
 export default Portfolio;

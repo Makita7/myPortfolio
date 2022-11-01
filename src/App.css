@@ -150,6 +150,15 @@
     padding: 1rem 0;
 }
 
+.opacity{
+    opacity: 0;
+    cursor: default;
+}
+.undoOpacity{
+    opacity: 1;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px){
     .block{
         display: block !important;
