@@ -7,6 +7,7 @@ import { BsGithub } from 'react-icons/bs';
 import { SiHtml5, SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiYarn, SiCss3, SiReact } from 'react-icons/si';
 import { FaSass, FaVuejs, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const Wrapper =  styled.div`
 margin: 4rem auto 2rem auto;
@@ -90,8 +91,28 @@ const PIcon = styled.img`
     margin-left: 0.5rem;
 `
 
+const MoreDetail = styled.button`
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background-color: #75AEA7;
+    border: 0px;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+`
 
-function PortfolioCard({ title, id, description, type, link, xd, figma, ps , ai, html, css, sass, js, react, vue, git, design, yarn, pnpm }) {
+function PortfolioCard({ routerLink, title, id, description, type, link, xd, figma, ps , ai, html, css, sass, js, react, vue, git, design, yarn, pnpm }) {
+
+    console.log(routerLink);
+
     return (
         <Wrapper className='flex block' key={id}>
             <DividerOne>
@@ -102,6 +123,11 @@ function PortfolioCard({ title, id, description, type, link, xd, figma, ps , ai,
                 <Description>
                     {description}
                 </Description>
+                <MoreDetail>
+                    <Link to={routerLink}>
+                        More Info
+                    </Link>
+                </MoreDetail>
                 <div className='flex'>
                     <Cols className='flex'>
                         <SmallTitles>type:</SmallTitles>

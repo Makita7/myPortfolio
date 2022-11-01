@@ -159,6 +159,15 @@
     cursor: pointer;
 }
 
+.cardlink{
+    text-decoration: none;
+    color: black;
+}
+
+.cardlink:hover{
+    scale: 2;
+}
+
 @media screen and (max-width: 1200px){
     .block{
         display: block !important;

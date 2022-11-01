@@ -6,7 +6,8 @@ import Footer from './components/Footer';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import UxUiDesign from './pages/UxUiDesign';
-import FrontEnd from './pages/FrontEnd';
+import PieceOne from './pages/Frontend-Subpages/PieceOne';
+import PieceTwo from './pages/Frontend-Subpages/PieceOne';
 
 /**
  * I want to make flavicon with a star or a & symbol
@@ -19,10 +20,10 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={ <Home/> } />
-          <Route path="/portfolio" element={ <Portfolio/> }>
-            <Route path='ux-ui' element={ <UxUiDesign/> } />
-            <Route path='frontend' element={ <FrontEnd/> } />
-          </Route>
+          <Route path="/portfolio/frontend" element={ <Portfolio/> }/>
+          <Route path='/portfolio/ux-ui' element={ <UxUiDesign/> } />
+          <Route path='pieceOne' element={ <PieceOne/> } />
+          <Route path='pieceTwo' element={ <PieceTwo/> } />
           <Route path="/about" element={ <About/> } />
         </Routes>
         <Footer/>
