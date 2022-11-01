@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {IoLogoWhatsapp} from 'react-icons/io'
+import { IoLogoWhatsapp } from 'react-icons/io'
 import { IoMdMail } from "react-icons/io";
-import {FaLinkedin} from 'react-icons/fa'
+import { FaLinkedin, FaGitAlt } from 'react-icons/fa'
 
 const FooterCont = styled.div`
     height: 8rem;
@@ -36,6 +36,9 @@ const Social = styled.ul`
     & a{
         margin: 0 0.5rem;
     }
+    & a:hover{
+        scale: 1.1;
+    }
 `
 
 function SiteFooter() {
@@ -49,10 +52,13 @@ function SiteFooter() {
                 <a className="cobalt" href="https://www.linkedin.com/in/sofia-makita-348a29172/">
                     <FaLinkedin size={28}/>
                 </a>
-                <a className="seaGreen" href="">
+                <a className="git" href="https://github.com/Makita7">
+                    <FaGitAlt size={28}/>
+                </a>
+                <a className="seaGreen" href="mailto:sophiamakita@gmail.com">
                     <IoMdMail size={28} />
                 </a>
-                <a className="olive" href="">
+                <a className="olive" href="https://wa.me/5402616794942?text=">
                     <IoLogoWhatsapp size={28}/>
                 </a>
             </Social>
