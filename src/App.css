@@ -73,3 +73,91 @@
 .minHeight{
     min-height: 42rem;
 }
+
+/* COLOR ICONS */
+.github{
+    color: #0D2636;
+}
+
+.html{
+    color: #F0652B;
+}
+
+.sass{
+    color: #CD6799;
+}
+
+.ps{
+    color: #091F34;
+    background-color: #47A2DA;
+    border-radius: 10px;
+}
+
+.ai {
+    color: #450A37;
+    background-color: #F89A1C;
+    border-radius: 10px;
+}
+
+.xd{
+    background-color: #CB73AF;
+    border-radius: 10px;
+    color: #450A37;
+}
+
+.vue{
+    color: #2f9c6f;
+}
+
+.react{
+    color: #38a2b9;
+}
+
+.js{
+    color: #323330;
+    background-color: #F4E118;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.css{
+    color: #4264AF;
+}
+
+.figma{
+    height: 35px;
+    width: 35px;
+}
+
+.yarn{
+    color: #3298C2;
+}
+
+.pnpm{
+    height: 35px;
+    width: 35px;
+}
+
+.git{
+    color: #EE5033;
+}
+
+.iconPad{
+    margin: 0.1rem 0.25rem;
+}
+
+.fXUmPF a{
+    padding: 1rem 0;
+}
+
+@media screen and (max-width: 1200px){
+    .block{
+        display: block !important;
+    }
+    .cardImg {
+        width: 80%;
+    }
+    .linkFix{
+        margin: 4rem 0 !important;
+    }
+}
