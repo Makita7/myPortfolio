@@ -57,7 +57,7 @@ function Home() {
                 <img alt="portrait" src={Portrait} />
             </Img>
             <Text>
-                <img  src={And} alt='and symbol' />
+                <img  src={And} alt='and symbol' className="fade-in"  />
                 <p className="front">
                     front end developer
                 </p>

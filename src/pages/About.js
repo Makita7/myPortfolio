@@ -87,7 +87,7 @@ function About() {
                         </a></Btn>
                 </DividerOne>
                 <DividerTwo>
-                    <img className="profilepic" alt="photo of Sofia Makita" src={Photo} />
+                    <img className="profilepic fade-in" alt="photo of Sofia Makita" src={Photo} />
                 </DividerTwo>
             </Wrapper>
             <Wrapper className="flex">

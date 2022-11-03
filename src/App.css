@@ -179,3 +179,26 @@
         margin: 4rem 0 !important;
     }
 }
+
+
+/* ANIMATIONS */
+
+.animate__slideInDown {
+    --animate-duration: 1s;
+
+}
+
+.fade-in{
+    animation: FadeIn 1s;
+}
+
+@keyframes FadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+  /* This changes all the animations globally */
+:root {
+--animate-duration: 800ms;
+--animate-delay: 0.9s;
+}

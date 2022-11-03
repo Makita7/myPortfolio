@@ -9,6 +9,7 @@ import { FaSass, FaVuejs, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
+
 const Wrapper =  styled.div`
 margin: 4rem auto 2rem auto;
 width: 80%;
@@ -114,7 +115,7 @@ function PortfolioCard({ routerLink, title, id, description, type, link, xd, fig
     console.log(routerLink);
 
     return (
-        <Wrapper className='flex block' key={id}>
+        <Wrapper className='flex block fade-in' key={id}>
             <DividerOne>
                 <img className='cardImg' alt='title of project' src={Img} />
             </DividerOne>
