@@ -132,9 +132,16 @@ const MoreDetail = styled.button`
 `
 
 const Divider = styled.div`
-    border-bottom: 1px #ababab solid;
+    border-bottom: 0px #ababab solid;
     height: 2rem;
+    content-visibility: hidden;
+    @media screen and (max-width: 800px) {
+        content-visibility: visible;
+        border-bottom: 1px #ababab solid;
+    }
 `
+
+export { Divider };
 
 function PortfolioCard({ routerLink, title, id, description, type, link, xd, figma, ps , ai, html, css, sass, js, react, vue, git, design, yarn, pnpm }) {
 

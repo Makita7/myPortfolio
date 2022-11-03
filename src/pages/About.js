@@ -2,11 +2,15 @@ import styled from "styled-components";
 import Photo from '../assets/photo.png';
 import Language from "../components/Language";
 import Tech from "../components/Tech";
+import { Divider } from "../components/PortfolioCard";
 
 const Wrapper = styled.div`
     margin: 4rem auto 2rem auto;
     width: 80%;
     vertical-align: middle;
+    @media screen and (max-width: 800px) {
+        margin: 2rem auto 1rem auto;
+    }
 `
 
 const Name = styled.p`
@@ -27,6 +31,13 @@ const DividerOne = styled.div`
     margin-top: auto;
     margin-bottom: auto;
     padding: 0 4rem;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        padding: 0;
+        & p{
+            text-align: center;
+        }
+    }
 `
 
 const DividerTwo = styled.div`
@@ -64,6 +75,9 @@ const DividerThree = styled.div`
     box-sizing: border-box;
     margin-top: auto;
     margin-bottom: auto;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 `
 
 export{Title, DividerThree};
@@ -71,9 +85,10 @@ export{Title, DividerThree};
 function About() {
     return (
         <>
-            <Wrapper className="flex">
+            <Wrapper className="flex celBlock">
                 <DividerOne>
-                    <div className="flex">
+                <img className="profilepic fade-in OnlyCel" alt="photo of Sofia Makita" src={Photo} />
+                    <div className="flex NameFix">
                         <Im>Hi, I'm </Im>
                         <Name>Sofia</Name>
                     </div>
@@ -86,14 +101,15 @@ function About() {
                             Download CV
                         </a></Btn>
                 </DividerOne>
-                <DividerTwo>
+                <DividerTwo className="NotCel">
                     <img className="profilepic fade-in" alt="photo of Sofia Makita" src={Photo} />
                 </DividerTwo>
             </Wrapper>
-            <Wrapper className="flex">
+            <Wrapper className="flex celBlock">
                 <Tech/>
                 <Language/>
             </Wrapper>
+            <Divider className="dividerFix OnlyCel"/>
         </>
     );
 }

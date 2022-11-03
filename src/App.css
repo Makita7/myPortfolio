@@ -186,6 +186,10 @@
     .linkFix{
         margin: 4rem 0 !important;
     }
+    .fixCol{
+        margin: auto 0rem auto 2rem;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -199,6 +203,20 @@
     }
     .fixCol{
         margin: auto 0rem auto 2rem;
+    }
+    .NameFix{
+        margin: 1rem auto -1rem 4rem;
+    }
+    .profilepic{
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+    .celBlock{
+        display: block !important;
+    }
+    .dividerFix{
+        margin: 0 2rem;
     }
 }
 
