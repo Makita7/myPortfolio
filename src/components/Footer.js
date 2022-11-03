@@ -7,6 +7,9 @@ const FooterCont = styled.div`
     height: 8rem;
     background-color: white;
     justify-content: center !important;
+    @media screen and (max-width: 800px){
+        margin-bottom: 2rem;
+    }
 `
 const Wrapper = styled.div`
     justify-content: center;

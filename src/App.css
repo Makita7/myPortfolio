@@ -13,6 +13,14 @@
     --WatermelonRed: #C74444;
 }
 
+.OnlyCel{
+    content-visibility: hidden !important;
+}
+
+.NotCel{
+    content-visibility: visible !important;
+}
+
 .flex{
     display: flex !important;
 }
@@ -177,6 +185,20 @@
     }
     .linkFix{
         margin: 4rem 0 !important;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .OnlyCel{
+        content-visibility: visible !important;
+    }
+
+    .NotCel{
+        content-visibility: hidden !important;
+        width: 0% !important;
+    }
+    .fixCol{
+        margin: auto 0rem auto 2rem;
     }
 }
 

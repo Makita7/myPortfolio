@@ -11,6 +11,12 @@ const Title = styled.h1`
     text-transform: uppercase;
     text-align: center;
     margin-left: 10rem;
+    @media screen and (max-width: 800px){
+        font-size: 2rem;
+        width: 60%;
+        padding-top: 1rem;
+        margin-left: 2rem;
+    }
 `
 
 const LinkImgF = styled.img`
@@ -19,6 +25,9 @@ const LinkImgF = styled.img`
     margin-right: 2rem;
     padding-left: 0;
     margin-top: 3rem;
+    @media screen and (max-width: 800px){
+        max-width: 7rem;
+    }
 `
 
 function UxUiDesign() {

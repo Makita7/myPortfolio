@@ -18,6 +18,9 @@ const Logo = styled.p`
         color: #26A0A0;
         margin-top: 1.4rem !important;
         text-decoration: none;
+        @media screen and (max-width: 800px){
+            font-size: 1.2rem;
+        }
     }
 `
 

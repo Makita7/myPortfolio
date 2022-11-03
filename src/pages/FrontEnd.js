@@ -11,6 +11,11 @@ const Title = styled.h1`
     text-transform: uppercase;
     text-align: center;
     margin-right: 10rem;
+    @media screen and (max-width: 800px){
+        font-size: 2rem;
+        width: 90%;
+        padding-top: 2rem;
+    }
 `
 
 const LinkImgD = styled.img`
@@ -18,6 +23,10 @@ const LinkImgD = styled.img`
     float: left;
     margin-left: 2rem;
     padding-left: 0;
+    @media screen and (max-width: 800px){
+        max-width: 5rem;
+        padding-top: 1rem;
+    }
 `
 
 function FrontEnd() {

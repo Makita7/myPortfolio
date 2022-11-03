@@ -11,9 +11,12 @@ import { Link } from 'react-router-dom';
 
 
 const Wrapper =  styled.div`
-margin: 4rem auto 2rem auto;
-width: 80%;
-vertical-align: middle;
+    margin: 4rem auto 2rem auto;
+    width: 80%;
+    vertical-align: middle;
+    @media screen and (max-width: 800px){
+        margin: 2rem auto;
+    }
 `
 
 const DividerTwo = styled.div`
@@ -24,6 +27,9 @@ const DividerTwo = styled.div`
     padding: 0 4rem;
     @media screen and (max-width: 1200px){
         width: 100%;
+    }
+    @media screen and (max-width: 800px){
+        padding: 0 0;
     }
 `
 
@@ -53,6 +59,9 @@ const Description = styled.p`
     @media screen and (max-width: 1200px){
         text-align: center;
     }
+    @media screen and (max-width: 800px){
+        font-size: 1rem;
+    }
 `
 const Cols = styled.div`
     width: 33%;
@@ -60,6 +69,9 @@ const Cols = styled.div`
     & a{
         text-decoration: none;
         margin: 3rem 0;
+    }
+    @media screen and (max-width: 800px){
+        width: 100%;
     }
 `
 
@@ -69,6 +81,9 @@ const SmallTitles = styled.p`
     color: var(--cobalt);
     margin: auto 0.5rem;
     font-size: 1.2rem;
+    @media screen and (max-width: 800px){
+        margin: auto 0.5rem 0 0.5rem;
+    }
 `
 
 const App = styled.p`
@@ -77,6 +92,9 @@ const App = styled.p`
     color: var(--cobalt);
     font-size: 2rem;
     margin: auto 0;
+    @media screen and (max-width: 800px){
+
+    }
 `
 
 const Tech = styled.p`
@@ -85,6 +103,9 @@ const Tech = styled.p`
     color: var(--cobalt);
     font-size: 2rem;
     margin: 2.8rem 0 auto;
+    @media screen and (max-width: 800px) {
+        margin: 0 0 auto;
+    }
 `
 
 const PIcon = styled.img`
@@ -110,6 +131,11 @@ const MoreDetail = styled.button`
     }
 `
 
+const Divider = styled.div`
+    border-bottom: 1px #ababab solid;
+    height: 2rem;
+`
+
 function PortfolioCard({ routerLink, title, id, description, type, link, xd, figma, ps , ai, html, css, sass, js, react, vue, git, design, yarn, pnpm }) {
 
     console.log(routerLink);
@@ -130,12 +156,12 @@ function PortfolioCard({ routerLink, title, id, description, type, link, xd, fig
                     </Link>
                 </MoreDetail>
                 <div className='flex'>
-                    <Cols className='flex'>
+                    <Cols className='flex block fixCol'>
                         <SmallTitles>type:</SmallTitles>
                         <App>{type}</App>
                     </Cols>
                     <Cols className='centered'>
-                        <a className='flex linkFix' href={link} >
+                        <a className='flex linkFix block' href={link} >
                             {design ?
                                 <>
                                     <SmallTitles>Prototype</SmallTitles>
@@ -149,7 +175,7 @@ function PortfolioCard({ routerLink, title, id, description, type, link, xd, fig
                             }
                         </a>
                     </Cols>
-                    <Cols className='centered'>
+                    <Cols className='centered NotCel'>
                         <Tech className='techFix'>Tech</Tech>
                         <div>
                             {ai ? <SiAdobeillustrator size={35} className="ai iconPad" /> : <></>}
@@ -168,7 +194,26 @@ function PortfolioCard({ routerLink, title, id, description, type, link, xd, fig
                         </div>
                     </Cols>
                 </div>
+                    <Cols className='centered OnlyCel'>
+                        <Tech className='techFix'>Tech</Tech>
+                        <div>
+                            {ai ? <SiAdobeillustrator size={35} className="ai iconPad" /> : <></>}
+                            {ps ? <SiAdobephotoshop size={35} className="ps iconPad" /> : <></>}
+                            {figma ? <img src={Figma} alt='figma icon' className='figma iconPad' /> : <></>}
+                            {xd ? <SiAdobexd size={35} className="xd iconPad" /> : <></>}
+                            {html ? <SiHtml5 className='html iconPad' size={35} /> : <></>}
+                            {css ? <SiCss3 size={35} className='css iconPad' /> : <></>}
+                            {sass ? <FaSass className="sass iconPad" size={35} /> : <></>}
+                            {js ? <IoLogoJavascript size={28} className='js iconPad' /> : <></>}
+                            {react ? <SiReact size={35} className="react iconPad" /> : <></>}
+                            {vue ? <FaVuejs size={35} className='vue iconPad'  /> : <></>}
+                            {git ? <FaGitAlt size={35} alt='icon git' className=' git iconPad' /> : <></>}
+                            {yarn ? <SiYarn size={35} className='yarn iconPad'  /> : <></>}
+                            {pnpm ? <img src={PNPM} alt='pnpm icon' className='pnpm iconPad' /> : <></>}
+                        </div>
+                    </Cols>
             </DividerTwo>
+            <Divider/>
         </Wrapper>
     );
 }
