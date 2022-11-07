@@ -9,6 +9,7 @@ const DropdownMenu = styled.div`
     width: 100vh;
     height: 100vh;
     margin-top: -5rem;
+    padding-bottom: 10rem;
     position: absolute;
     & a{
         text-decoration: none;
