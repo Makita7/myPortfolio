@@ -8,6 +8,7 @@ import { SiHtml5, SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiYarn, SiCss
 import { FaSass, FaVuejs, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 
 const Wrapper =  styled.div`
@@ -71,7 +72,8 @@ const Cols = styled.div`
         margin: 3rem 0;
     }
     @media screen and (max-width: 800px){
-        width: 100%;
+        width: 100% !important;
+        margin: 1.5rem 0.2rem 0.6rem 0.2rem;
     }
 `
 
@@ -82,7 +84,7 @@ const SmallTitles = styled.p`
     margin: auto 0.5rem;
     font-size: 1.2rem;
     @media screen and (max-width: 800px){
-        margin: auto 0.5rem 0 0.5rem;
+        margin: 4rem 0.5rem 0 0.5rem;
     }
 `
 
@@ -146,6 +148,14 @@ export { Divider };
 function PortfolioCard({ routerLink, title, id, description, type, link, xd, figma, ps , ai, html, css, sass, js, react, vue, git, design, yarn, pnpm }) {
 
     console.log(routerLink);
+    const [screenWidth, setScreenWidth] = useState(false);
+
+    const WIDTH = window.screen.availWidth;
+    console.log('portCard' + WIDTH <= 800)
+
+    useEffect(() => {
+        setScreenWidth(WIDTH <= 800);
+    }, [WIDTH])
 
     return (
         <Wrapper className='flex block fade-in' key={id}>
@@ -182,43 +192,49 @@ function PortfolioCard({ routerLink, title, id, description, type, link, xd, fig
                             }
                         </a>
                     </Cols>
-                    <Cols className='centered NotCel'>
-                        <Tech className='techFix'>Tech</Tech>
-                        <div>
-                            {ai ? <SiAdobeillustrator size={35} className="ai iconPad" /> : <></>}
-                            {ps ? <SiAdobephotoshop size={35} className="ps iconPad" /> : <></>}
-                            {figma ? <img src={Figma} alt='figma icon' className='figma iconPad' /> : <></>}
-                            {xd ? <SiAdobexd size={35} className="xd iconPad" /> : <></>}
-                            {html ? <SiHtml5 className='html iconPad' size={35} /> : <></>}
-                            {css ? <SiCss3 size={35} className='css iconPad' /> : <></>}
-                            {sass ? <FaSass className="sass iconPad" size={35} /> : <></>}
-                            {js ? <IoLogoJavascript size={28} className='js iconPad' /> : <></>}
-                            {react ? <SiReact size={35} className="react iconPad" /> : <></>}
-                            {vue ? <FaVuejs size={35} className='vue iconPad'  /> : <></>}
-                            {git ? <FaGitAlt size={35} alt='icon git' className=' git iconPad' /> : <></>}
-                            {yarn ? <SiYarn size={35} className='yarn iconPad'  /> : <></>}
-                            {pnpm ? <img src={PNPM} alt='pnpm icon' className='pnpm iconPad' /> : <></>}
-                        </div>
-                    </Cols>
+                    {!screenWidth ?
+                        <Cols className='centered NotCel'>
+                            <Tech className='techFix'>Tech</Tech>
+                            <div>
+                                {ai ? <SiAdobeillustrator size={35} className="ai iconPad" /> : <></>}
+                                {ps ? <SiAdobephotoshop size={35} className="ps iconPad" /> : <></>}
+                                {figma ? <img src={Figma} alt='figma icon' className='figma iconPad' /> : <></>}
+                                {xd ? <SiAdobexd size={35} className="xd iconPad" /> : <></>}
+                                {html ? <SiHtml5 className='html iconPad' size={35} /> : <></>}
+                                {css ? <SiCss3 size={35} className='css iconPad' /> : <></>}
+                                {sass ? <FaSass className="sass iconPad" size={35} /> : <></>}
+                                {js ? <IoLogoJavascript size={28} className='js iconPad' /> : <></>}
+                                {react ? <SiReact size={35} className="react iconPad" /> : <></>}
+                                {vue ? <FaVuejs size={35} className='vue iconPad'  /> : <></>}
+                                {git ? <FaGitAlt size={35} alt='icon git' className=' git iconPad' /> : <></>}
+                                {yarn ? <SiYarn size={35} className='yarn iconPad'  /> : <></>}
+                                {pnpm ? <img src={PNPM} alt='pnpm icon' className='pnpm iconPad' /> : <></>}
+                            </div>
+                        </Cols>
+                        : <></>
+                    }
                 </div>
-                    <Cols className='centered OnlyCel'>
-                        <Tech className='techFix'>Tech</Tech>
-                        <div>
-                            {ai ? <SiAdobeillustrator size={35} className="ai iconPad" /> : <></>}
-                            {ps ? <SiAdobephotoshop size={35} className="ps iconPad" /> : <></>}
-                            {figma ? <img src={Figma} alt='figma icon' className='figma iconPad' /> : <></>}
-                            {xd ? <SiAdobexd size={35} className="xd iconPad" /> : <></>}
-                            {html ? <SiHtml5 className='html iconPad' size={35} /> : <></>}
-                            {css ? <SiCss3 size={35} className='css iconPad' /> : <></>}
-                            {sass ? <FaSass className="sass iconPad" size={35} /> : <></>}
-                            {js ? <IoLogoJavascript size={28} className='js iconPad' /> : <></>}
-                            {react ? <SiReact size={35} className="react iconPad" /> : <></>}
-                            {vue ? <FaVuejs size={35} className='vue iconPad'  /> : <></>}
-                            {git ? <FaGitAlt size={35} alt='icon git' className=' git iconPad' /> : <></>}
-                            {yarn ? <SiYarn size={35} className='yarn iconPad'  /> : <></>}
-                            {pnpm ? <img src={PNPM} alt='pnpm icon' className='pnpm iconPad' /> : <></>}
-                        </div>
-                    </Cols>
+                    {screenWidth ?
+                        <Cols className='centered OnlyCel'>
+                            <Tech className='techFix'>Tech</Tech>
+                            <div>
+                                {ai ? <SiAdobeillustrator size={35} className="ai iconPad" /> : <></>}
+                                {ps ? <SiAdobephotoshop size={35} className="ps iconPad" /> : <></>}
+                                {figma ? <img src={Figma} alt='figma icon' className='figma iconPad' /> : <></>}
+                                {xd ? <SiAdobexd size={35} className="xd iconPad" /> : <></>}
+                                {html ? <SiHtml5 className='html iconPad' size={35} /> : <></>}
+                                {css ? <SiCss3 size={35} className='css iconPad' /> : <></>}
+                                {sass ? <FaSass className="sass iconPad" size={35} /> : <></>}
+                                {js ? <IoLogoJavascript size={28} className='js iconPad' /> : <></>}
+                                {react ? <SiReact size={35} className="react iconPad" /> : <></>}
+                                {vue ? <FaVuejs size={35} className='vue iconPad'  /> : <></>}
+                                {git ? <FaGitAlt size={35} alt='icon git' className=' git iconPad' /> : <></>}
+                                {yarn ? <SiYarn size={35} className='yarn iconPad'  /> : <></>}
+                                {pnpm ? <img src={PNPM} alt='pnpm icon' className='pnpm iconPad' /> : <></>}
+                            </div>
+                        </Cols>
+                        : <></>
+                    }
             </DividerTwo>
             <Divider/>
         </Wrapper>

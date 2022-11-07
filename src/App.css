@@ -15,6 +15,7 @@
 
 .OnlyCel{
     content-visibility: hidden !important;
+    width: 0% !important;
 }
 
 .NotCel{
@@ -217,6 +218,12 @@
     }
     .dividerFix{
         margin: 0 2rem;
+    }
+    .fEJNTo{
+        margin: 1.5rem 0.2rem 0.6rem 0.2rem;
+    }
+    .CelNav{
+        margin-left: -10rem;
     }
 }
 
