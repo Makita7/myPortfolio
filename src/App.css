@@ -244,6 +244,15 @@
     to   { opacity: 1; }
 }
 
+.fade-out{
+    animation: FadeOut 1s;
+}
+
+@keyframes FadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
   /* This changes all the animations globally */
 :root {
 --animate-duration: 800ms;

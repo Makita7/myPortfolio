@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { NavContext } from "../App";
 
 const ToogleBtn = styled.button`
     padding: 8px;
@@ -26,12 +27,7 @@ const DropdownMenu = styled.div`
  */
 
 function HeaderNavbarDropdown() {
-    const [navOpen, setNavOpen] = useState(false);
-
-    let Open = e => {
-        setNavOpen(!navOpen)
-    }
-
+    const {Open, navOpen} = useContext(NavContext);
     function DropMenuElement(props){
         return(
                 <Link onClick={Open} to={props.to} className='dropLinks'> {props.name} </Link>
@@ -47,7 +43,7 @@ function HeaderNavbarDropdown() {
                 </ToogleBtn>
                 : <></>
             }
-
+{/*
             { navOpen ?
                 <DropdownMenu>
                     <DropMenuElement className='yellow' to='/' name="Home"/>
@@ -55,7 +51,7 @@ function HeaderNavbarDropdown() {
                     <DropMenuElement className='cobalt' to='/about' name="About"/>
                 </DropdownMenu>
                 : <></>
-            }
+            } */}
         </div>
         </>
     );

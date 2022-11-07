@@ -1,16 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { NavContext } from "../App";
 import styled from 'styled-components';
 import HeaderNavbarDropdown from './HeaderNavbarDropdown';
 
 const Navbar = styled.nav`
     height: 5rem;
     background-color: white;
-    position: sticky;
     text-transform: uppercase;
+    top: 0;
+    position: sticky;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
-    @media screen and(max-width: 800px) {
-        height: 4rem;
+    @media screen and (max-width: 800px){
+        height: 4rem !important;
     }
 `
 
@@ -48,9 +50,9 @@ const Links = styled.div`
 
 function SiteHeaderNavbar() {
     const [screenWidth, setScreenWidth] = useState(false);
+    const {Open} = useContext(NavContext);
 
     const WIDTH = window.screen.availWidth;
-    console.log(WIDTH > 800)
 
     useEffect(() => {
         setScreenWidth(WIDTH > 800);
